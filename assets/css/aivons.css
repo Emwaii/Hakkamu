@@ -35,6 +35,38 @@
     --thm-letter-space-small: -0.02em;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-button {
+width: 0px;
+height: 0px;
+}
+::-webkit-scrollbar-thumb {
+background: #0f0d1d;
+border: 0px none #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #3d3d3d;
+}
+::-webkit-scrollbar-thumb:active {
+background: #0a0814;
+}
+::-webkit-scrollbar-track {
+background: #d6d6d6;
+border: 0px none #ffffff;
+}
+::-webkit-scrollbar-track:hover {
+background: #cfcfcf;
+}
+::-webkit-scrollbar-track:active {
+background: #949494;
+}
+::-webkit-scrollbar-corner {
+background: #949494;
+}
+
 .row {
     --bs-gutter-x: 30px;
 }
@@ -280,6 +312,25 @@ body.boxed-wrapper {
     background-color: var(--thm-base);
 }
 
+.dropdown>ul .card {
+    display: inline-block;
+    background-color: #fff;
+    padding: 15px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    vertical-align: top;
+    width: 150px;
+}
+
+.dropdown>ul .card:last-child {
+    margin-right: 0;
+}
+
+.dropdown>ul  :hover{
+    display: block;
+}
 /* .preloader {
     position: fixed;
     background-color: var(--thm-black);
@@ -581,7 +632,7 @@ body.boxed-wrapper {
     display: flex;
     align-items: center;
     color: var(--thm-base);
-    text-transform: uppercase;
+    text-transform:uppercase;
     position: relative;
     transition: all 500ms ease;
     letter-spacing: var(--thm-letter-space-big);
@@ -622,6 +673,7 @@ body.boxed-wrapper {
 
 .main-menu .main-menu__list li ul,
 .stricky-header .main-menu__list li ul {
+    border-radius: 10px;
     position: absolute;
     top: 100%;
     left: 0;
@@ -1529,7 +1581,8 @@ body.boxed-wrapper {
 }
 
 .search-popup__content form input[type="search"],
-.search-popup__content form input[type="text"] {
+.search-popup__content form input[type="text"],
+.search-popup__content form textarea {
     width: 100%;
     background-color: var(--thm-base);
     font-size: 16px;
@@ -1537,6 +1590,9 @@ body.boxed-wrapper {
     outline: none;
     height: 66px;
     padding-left: 30px;
+    line-height: normal;
+    padding-right: 65px;
+    padding-top: 1rem;
 }
 
 .search-popup__content .thm-btn {
@@ -3507,7 +3563,7 @@ body.boxed-wrapper {
     width: 100%;
     transform: scale(1);
     transition: all 500ms ease;
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
 }
 
 .news-one__single:hover .news-one__img>img {
