@@ -275,6 +275,11 @@ body.boxed-wrapper {
     cursor: pointer;
 }
 
+.container-jasa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Jarak antara elemen */
+}
 
 .section-title {
     margin-top: -12px;
@@ -727,6 +732,7 @@ body.boxed-wrapper {
 .stricky-header .main-menu__list li ul li:hover>a {
     background-color: var(--thm-primary);
     color: var(--thm-base);
+    border-radius: 10px;
 }
 
 .main-menu .main-menu__list li ul li>ul,
