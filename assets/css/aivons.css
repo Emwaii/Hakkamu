@@ -3147,6 +3147,8 @@ body.boxed-wrapper {
 
 .testimonials-one__text {
     margin: 0;
+    font-size: medium;
+    line-height: normal;
 }
 
 .testimonials-one__client-info {
@@ -3169,7 +3171,6 @@ body.boxed-wrapper {
     text-transform: uppercase;
     line-height: 22px;
     letter-spacing: var(--thm-letter-space-big);
-
 }
 
 .testimonials-one__client-img {
@@ -8878,6 +8879,15 @@ body.boxed-wrapper {
         align-items: center;
     }
 }
+/* @media (max-width: 575px) {
+    .swiper-button-prev {
+        left: 10px !important;
+    }
+
+    .swiper-button-next {
+        right: 10px !important;
+    }
+} */
 
 @media(min-width: 992px) {
 
