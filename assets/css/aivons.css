@@ -4663,7 +4663,7 @@ body.boxed-wrapper {
     right: 0;
     bottom: 0;
     content: "";
-    background-color: rgba(var(--thm-primary-rgb), .90);
+    background-color: rgba(0, 0, 0, .80);
     transform: translateY(100%);
     transition: all 500ms ease;
     z-index: 1;
@@ -4679,13 +4679,13 @@ body.boxed-wrapper {
 
 .team-one__img>img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
 }
 
 .team-one__hover-content {
     position: absolute;
     top: 43px;
-    left: 50px;
+    left: 1rem;
     transform: translateX(-160%);
     transition: all 900ms ease;
     opacity: 0;
@@ -7664,6 +7664,13 @@ body.boxed-wrapper {
 /*--------------------------------------------------------------
 ## About
 --------------------------------------------------------------*/
+.indo, .eng {
+    display: none;
+}
+.show {
+display: block;
+}
+
 .about {
     position: relative;
     display: block;
@@ -7679,11 +7686,12 @@ body.boxed-wrapper {
     position: relative;
     display: block;
     background-color: var(--thm-black);
+    border-radius: 1rem;
 }
 
 .about-img>img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    border-radius: 1rem;
 }
 
 .about__right {
