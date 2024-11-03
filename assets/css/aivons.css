@@ -35,6 +35,14 @@
     --thm-letter-space-small: -0.02em;
 }
 
+.category {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -2313,6 +2321,7 @@ body.boxed-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .brand-one .swiper-slide img {
