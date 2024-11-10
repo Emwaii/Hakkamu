@@ -82,7 +82,7 @@
                 <div class="main-menu-wrapper">
                     <div class="main-menu-wrapper__left">
                         <div class="main-menu-wrapper__logo">
-                            <a href="#"><img src="image/logo-putih.png" width="125"></a>
+                            <a href="index.html"><img src="image/logo-putih.png" width="125"></a>
                         </div>
                         <div class="main-menu-wrapper__main-menu">
                             <a href="#" class="mobile-nav__toggler">
@@ -113,9 +113,9 @@
                                 <li class="dropdown">
                                     <a href="#">Grow Your Business</a>
                                     <ul>
-                                        <li><a href="#">Perjanjian dan Kontrak</a></li>
-                                        <li><a href="#">Perubahan legalitas usaha</a></li>
-                                        <li><a href="#">Dispute Settlement</a></li>
+                                        <li><a href="perjanjian.html">Perjanjian dan Kontrak</a></li>
+                                        <li><a href="perubahan.html">Perubahan legalitas usaha</a></li>
+                                        <li><a href="sengketa.html">Dispute Settlement</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Contact</a></li>
@@ -912,7 +912,7 @@
             <form id="whatsapp_send" style="border-radius: 1rem;">
                 <label for="pesan" class="sr-only">Tulis Pesan</label><!-- /.sr-only -->
                 <textarea id="pesan" placeholder="Tuliskan pertanyaanmu disini..."></textarea>
-                <button type="submit" aria-label="search submit" class="thm-btn">
+                <button onclick="sendMessage()" aria-label="search submit" class="thm-btn">
                     <i class="ti ti-send-2" style="font-size: 2rem"></i>
                 </button>
             </form>
@@ -946,6 +946,15 @@
     <script src="assets/vendors/bxslider/js/jquery.bxslider.min.js"></script>
     <!-- template js -->
     <script src="assets/js/aivons.js"></script>
+    <script>
+        function sendMessage() {
+            const phoneNumber = "62881081250297"; 
+            const message = document.getElementById("pesan").value;
+            const encodedMessage = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(waUrl, "_blank");
+        }
+    </script>
 </body>
 
 </html>
