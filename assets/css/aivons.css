@@ -14,12 +14,12 @@
 # Client Carousel
 --------------------------------------------------------------*/
 
-
+/* font-family: Arial, Helvetica, sans-serif; */
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
 :root {
-    --thm-font: 'Jost', sans-serif;
+    --thm-font: Arial, Helvetica, sans-serif;
     --thm-reey-font: 'reeyregular';
     --thm-gray: #726f84;
     --thm-gray-rgb: 114, 111, 132;
@@ -266,6 +266,22 @@ body.boxed-wrapper {
     color: var(--thm-primary);
 }
 
+.btn-hubungi{
+    border-radius: .5rem;
+    background-color: #133a6f;
+}
+
+.btn-hubungi:hover {
+    background: #0e2c55;
+    color: #e6662d;
+}
+
+.btn-hubungi i {
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 .jenis_jasa{
     font-size: 16px !important;
     padding: .35rem;
@@ -312,6 +328,7 @@ body.boxed-wrapper {
     font-size: 18px;
     align-items: center;
     line-height: 30px;
+    text-align: justify;
 }
 
 .bootstrap-select .dropdown-menu {
@@ -526,6 +543,7 @@ body.boxed-wrapper {
     position: relative;
     display: flex;
     padding-left: 60px;
+    padding-right: 60px;
 }
 
 
@@ -1691,9 +1709,9 @@ body.boxed-wrapper {
     transform: scale(1);
     transition: transform 7000ms ease;
     z-index: 1;
-    background-color: var(--thm-black);
+    /* background-color: var(--thm-black); */
     background-blend-mode: luminosity;
-    opacity: 0.7;
+    opacity: 0.55;
     background-position: center center;
 }
 
@@ -2210,6 +2228,7 @@ body.boxed-wrapper {
     padding: 54px 60px 75px;
     margin-bottom: 30px;
     transition: background 500ms ease;
+    height: 225px;
 }
 
 .real-world__single:hover {
@@ -2364,7 +2383,7 @@ body.boxed-wrapper {
 .welcome-one {
     position: relative;
     display: block;
-    padding: 120px 0 120px;
+    padding: 100px 0 100px;
 }
 
 .welcome-one__left {
@@ -2486,7 +2505,227 @@ body.boxed-wrapper {
     }
 }
 
+/*SERVICES*/
+.layanan-description {
+    max-height: 200px;
+    /* Limit the height to allow scrolling */
+    min-height: 200px;
+    overflow-y: auto;
+    /* Enable vertical scrolling when content overflows */
+    position: relative;
+    /* Ensures the gradient is positioned within the container */
+    padding-right: 15px;
+    /* Optional: Add padding to create space for scrollbar */
+}
 
+.price-sec .card-price {
+    min-height: 450px !important;
+    max-height: 550px !important;
+}
+
+.gradient-pricing {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    /* Height of the gradient effect */
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    /* Gradient from white to transparent */
+    pointer-events: none;
+    /* Ensures the gradient doesn't block interactions */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for hiding */
+    opacity: 1;
+    /* Default state: show the gradient */
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+/* When .no-gradient is added, hide the gradient */
+
+.layanan-description.no-gradient .gradient-pricing {
+    opacity: 0;
+    /* Hide the gradient */
+}
+.layanan-description ul{
+  padding-left: 0rem;
+}
+.layanan-description ul li{
+  list-style: none;
+  line-height: 1.5rem;
+  display: flex;       
+  padding-left: 0px;
+}
+.layanan-description ul li::before{
+  content: "-";
+  color: #133a6f;
+  font-size: 18px;
+  font-family: 'Material Icons';
+  padding-right: 10px;
+  display: inline-block;
+  margin-left: calc( var(--icon-space) * -1 );
+  width: var(--icon-space);
+  vertical-align: middle;
+}
+
+/*.layanan-justify p {
+    text-align: justify;
+}*/
+.service-image img{
+    width: 100%;
+}
+.included-link{
+    color: #2d2d2d;
+    font-weight: 600;
+}
+.included-link:hover{
+    color: #1c3e33;
+    font-weight: 600;
+}
+.cases-one__img>img{
+    opacity: 1;
+    min-height: 329px;
+    object-fit: cover;
+}
+.cases-one__icon img{
+    width: 64px;
+}
+.cases-one__content{
+    padding: 30px;
+}
+@media (max-width:768px) {
+    .sub-service img{
+        min-height: 370px !important;
+        object-fit: cover !important;
+    }
+}
+@media (min-width:768px) {
+    .sub-service img{
+        min-width: 570px;
+        min-height: 517px;
+        object-fit: cover;
+    }
+}
+.about-detail-service img{
+    width: 100%;
+}
+@media (max-width:768px) {
+    .kbli-desc{
+        text-align: left !important;
+    }
+}
+.price-sec .card-price{
+    min-height: 550px;
+    max-height: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.pricing-include ul{
+    margin-bottom: 1rem
+}
+
+/*BUTTON*/
+.contact-us i{
+    font-size: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+    color: #ffffff;
+    transition: 500ms;
+}
+.card-price p{
+    text-align: left !important;
+}
+.contact-bt{
+    font-size: 14px !important;
+    background: #133a6f;
+    color: white;
+}
+.contact-bt:hover{
+    background: #0a2750;
+    color: #e6652e;
+}
+
+.contact-bt:hover i{
+    color: #e6652e;
+}
+
+.price-sec{
+    background-color: #f7f7f7;
+}
+.price-sec h1{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60.95px;
+    color: #0F0D1D;
+    text-align: center;
+}
+.price-sec p{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.94px;
+    color: #726F84;
+    text-align: center;
+}
+.price-sec .card-price{
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: .5rem;
+}
+.price-sec .card-price h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    color: #133a6f;
+}
+.price-sec .card-price h2{
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 29.26px;
+}
+.price-sec .card-price p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29.26px;
+    color: #a5a5a5;
+    text-align: justify;
+}
+.price-sec .card-promo-horizon{
+    padding: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+}
+.price-sec .card-promo-horizon h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 29px;
+}
+.price-sec .card-promo-horizon h2{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+}
+.price-sec .card-promo-horizon p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: left;
+    margin: 0;
+}
+.price-sec .card-promo-horizon a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 29px;
+    color: #236651;
+}
+.price-sec .container .thm-btn{
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: .5rem;
+}
 
 .welcome-one__right {
     position: relative;
@@ -2506,13 +2745,16 @@ body.boxed-wrapper {
 .welcome-one__text {
     margin: 0;
     padding-bottom: 37px;
+    text-align: justify;
 }
 
 .welcome-one__text-two {
     font-size: 26px;
     color: var(--thm-primary);
     font-weight: 400;
-    line-height: 45px
+    line-height: 45px;
+    text-align: justify;
+
 }
 
 .welcome-one__progress {
@@ -2564,6 +2806,7 @@ body.boxed-wrapper {
     text-align: center;
     opacity: 0;
     transition: all 500ms ease;
+    text-align: justify;
 }
 
 .welcome-one__progress .bar-inner.counted .count-text {
@@ -2603,12 +2846,14 @@ body.boxed-wrapper {
     font-size: 20px;
     font-weight: 400;
     margin: 0;
+    text-align: justify;
 }
 
 .welcome-one__call-text a {
     font-size: 18px;
     color: var(--thm-black);
     transition: all 500ms ease;
+    text-align: justify;
 }
 
 .welcome-one__call-text a:hover {
@@ -2618,7 +2863,7 @@ body.boxed-wrapper {
 .welcome-one__big-text {
     font-size: 120px;
     color: var(--thm-light);
-    ;
+    z-index: -1;
     text-transform: uppercase;
     letter-spacing: 0.4em;
     font-weight: 300;
@@ -2627,6 +2872,7 @@ body.boxed-wrapper {
     top: 358px;
     right: -473px;
     transform: rotate(90deg);
+
 }
 
 /*--------------------------------------------------------------
@@ -2705,6 +2951,7 @@ body.boxed-wrapper {
 .two-boxes__text {
     font-size: 16px;
     margin: 0;
+    text-align: justify;
 }
 
 /*--------------------------------------------------------------
@@ -3186,6 +3433,7 @@ body.boxed-wrapper {
     margin: 0;
     font-size: medium;
     line-height: normal;
+    text-align: justify;
 }
 
 .testimonials-one__client-info {
@@ -3892,14 +4140,14 @@ body.boxed-wrapper {
 
 .footer-widget__text {
     font-size: 16px;
-    color: #8f8da0;
+    color: #ffffff;
     margin: 0;
 }
 
 .footer-widget__contact-list {
     position: relative;
     display: block;
-    border-top: 1px solid rgba(255, 255, 255, .10);
+    border-top: 1px solid rgba(255, 255, 255, 1);
     margin-top: 18px;
     padding-top: 20px;
 }
@@ -3928,18 +4176,18 @@ body.boxed-wrapper {
 .footer-widget__contact-list li .text p {
     margin: 0;
     font-size: 16px;
-    color: #8f8da0;
+    color: #ffffff;
 }
 
 .footer-widget__contact-list li .text p a {
     font-size: 16px;
-    color: #8f8da0;
+    color: #ffffff;
     font-weight: 500;
     transition: all 500ms ease;
 }
 
 .footer-widget__contact-list li .text p a:hover {
-    color: var(--thm-base);
+    color: #e6662d
 }
 
 
@@ -3967,12 +4215,12 @@ body.boxed-wrapper {
 
 .footer-widget__explore-list li a {
     font-size: 16px;
-    color: #8f8da0;
+    color: #ffffff;
     transition: all 500ms ease;
 }
 
 .footer-widget__explore-list li a:hover {
-    color: var(--thm-base);
+    color: #e6662d
 }
 
 .footer-widget__explore-list-two {
@@ -4064,17 +4312,17 @@ body.boxed-wrapper {
 
 .site-footer-bottom__left p {
     font-size: 16px;
-    color: #8f8da0;
+    color: #ffffff;
     margin: 0;
 }
 
 .site-footer-bottom__left a {
-    color: #8f8da0;
+    color: #ffffff;
     transition: all 500ms ease;
 }
 
 .site-footer-bottom__left a:hover {
-    color: var(--thm-base);
+    color: #e6662d
 }
 
 .site-footer__social {
@@ -4308,6 +4556,7 @@ body.boxed-wrapper {
     margin: 0;
     padding-top: 21px;
     padding-bottom: 14px;
+    text-align: justify;
 }
 
 .services-one__btn {
@@ -4691,6 +4940,7 @@ body.boxed-wrapper {
     display: block;
     z-index: 2;
     overflow: hidden;
+    border-radius: 1rem;
 }
 
 .team-one__img:before {
@@ -4932,6 +5182,7 @@ body.boxed-wrapper {
     font-weight: 400;
     line-height: 54px;
     margin: 0;
+    text-align: justify;
 }
 
 .testimonial-two__client-details {
@@ -5314,7 +5565,7 @@ body.boxed-wrapper {
 
 .cta-two__title {
     font-size: 50px;
-    color: var(--thm-primary);
+    color: #133a70;
     font-weight: 900;
     line-height: 60px;
     text-transform: uppercase;
@@ -5325,6 +5576,7 @@ body.boxed-wrapper {
 .cta-two__text {
     font-size: 24px;
     margin: 0;
+    /* text-align: justify; */
 }
 
 .cta-two__icon-box {
@@ -5345,7 +5597,7 @@ body.boxed-wrapper {
 .cta-two__icon-box li a {
     height: 77px;
     width: 77px;
-    background-color: var(--thm-black);
+    background-color: #133a70;
     font-size: 35px;
     color: var(--thm-base);
     display: flex;
@@ -5356,7 +5608,7 @@ body.boxed-wrapper {
 }
 
 .cta-two__icon-box li a:hover {
-    background-color: var(--thm-primary);
+    background-color: #e6652e;
 }
 
 
@@ -5445,6 +5697,7 @@ body.boxed-wrapper {
     line-height: 32px;
     padding-bottom: 14px;
     transition: all 500ms ease;
+    text-align: justify;
 }
 
 .feature__single:hover .feature__text {
@@ -5702,12 +5955,14 @@ body.boxed-wrapper {
     float: right;
     max-width: 215px;
     top: 95px;
+    text-align: justify;
 }
 
 .cases-two__text-bottom {
     font-size: 16px;
     margin: 0;
     color: var(--thm-base);
+    text-align: justify;
 }
 
 /*--------------------------------------------------------------
@@ -5788,6 +6043,7 @@ body.boxed-wrapper {
 .services-two__text {
     font-size: 16px;
     margin: 0;
+    text-align: justify;
 }
 
 .services-two__arrow {
@@ -6104,7 +6360,7 @@ body.boxed-wrapper {
 .page-header {
     position: relative;
     display: block;
-    padding: 244px 0 139px;
+    padding: 215px 0 115px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -6112,9 +6368,9 @@ body.boxed-wrapper {
 }
 
 .page-header__bg {
-    background-image: url(../images/backgrounds/page-header-bg.jpg);
+    /* background-image: url(); */
     background-size: cover;
-    background-color: var(--thm-black);
+    /* background-color: var(--thm-black); */
     background-blend-mode: luminosity;
     opacity: 0.5;
     position: absolute;
@@ -6496,6 +6752,7 @@ body.boxed-wrapper {
     z-index: 10;
     line-height: 32px;
     margin-bottom: 31px;
+    text-align: justify;
 }
 
 .services-details__phone {
@@ -6560,12 +6817,14 @@ body.boxed-wrapper {
     margin: 0;
     line-height: 32px;
     padding-bottom: 30px;
+    text-align: justify;
 }
 
 .cases-details__text-2 {
     font-size: 16px;
     margin: 0;
     line-height: 32px;
+    text-align: justify;
 }
 
 
@@ -7711,7 +7970,7 @@ display: block;
 .about {
     position: relative;
     display: block;
-    padding: 120px 0 120px;
+    padding: 100px 0 80px;
 }
 
 .about__img-box {
@@ -7722,7 +7981,7 @@ display: block;
 .about-img {
     position: relative;
     display: block;
-    background-color: var(--thm-black);
+    background-color: transparent;
     border-radius: 1rem;
 }
 
@@ -7775,6 +8034,7 @@ display: block;
     font-weight: 400;
     margin: 0;
     padding-bottom: 49px;
+    text-align: justify;
 }
 
 .about__phone-contact {
@@ -8423,6 +8683,7 @@ display: block;
     border-top: 1px solid #e6e9ef;
     padding-top: 20px;
     margin-top: 20px;
+    text-align: justify;
 }
 
 .product-details__content__text p {
@@ -8430,6 +8691,7 @@ display: block;
     font-size: 16px;
     line-height: 32px;
     color: var(--thm-gray);
+    text-align: justify;
 }
 
 .product-details__content__text p+p {
@@ -8454,6 +8716,7 @@ display: block;
     line-height: 1;
     margin-right: 20px;
     text-transform: uppercase;
+    text-align: justify;
 }
 
 .product-details__content__quantity .quantity-box {
@@ -8563,6 +8826,7 @@ display: block;
     color: var(--thm-black);
     font-weight: bold;
     text-transform: uppercase;
+    text-align: justify;
 }
 
 @media (min-width: 992px) {
@@ -8693,6 +8957,7 @@ display: block;
     line-height: 32px;
     color: var(--thm-gray);
     margin-top: 20px;
+    text-align: justify;
 }
 
 .product-review__item__meta {
