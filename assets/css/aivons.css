@@ -4155,7 +4155,7 @@ body.boxed-wrapper {
 .footer-widget__contact-list li {
     position: relative;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .footer-widget__contact-list li+li {
