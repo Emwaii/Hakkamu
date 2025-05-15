@@ -2994,7 +2994,7 @@ body.boxed-wrapper {
     width: 100%;
     /* mix-blend-mode: luminosity; */
     transform: scale(1);
-    opacity: .7;
+    opacity: .6;
     transition: all 500ms ease;
 }
 
